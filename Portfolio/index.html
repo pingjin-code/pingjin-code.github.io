@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Elias Portfolio</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+        <style>
+            body {
+                background: #0f172a;
+                color: white;
+            }
+            .section {
+                padding: 80px 0;
+            }
+            .card {
+                background: #1e293b;
+                border: 1px solid #334155;
+                transition: 0.3s;
+            }
+            .card:hover {
+                transform: translateY(-5px);
+                border-color: #38bdf8;
+            }
+            .text-secondary {
+                color: #94a3b8;
+            }
+            label {
+                color: #e2e8f0;
+            }
+            .timeline-line {
+                position: absolute;
+                left: 50%;
+                width: 2px;
+                height: 100%;
+                background: #38bdf8;
+                transform: translateX(-50%);
+                z-index: 0;
+            }
+            .timeline-dot {
+                width: 16px;
+                height: 16px;
+                background: #38bdf8;
+                border-radius: 50%;
+                margin: auto;
+                position: relative;
+                z-index: 1;
+            }
+            .btn-accent {
+                background: #38bdf8;
+                border: none;
+                color: #000;
+                font-weight: bold;
+            }
+            .btn-accent:hover {
+                background: #7dd3fc;
+                transform: scale(1.05);
+            }
+        </style>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="#">ELIAS</a>
+                <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="nav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <section id="home" class="section text-center" style="background: radial-gradient(#1e293b, #0f172a)">
+            <div class="container">
+                <h1 class="display-4 fw-bold">Elias Lee Ping Jin</h1>
+                <p class="lead text-white-50">Student • Web Development</p>
+                <a href="#contact" class="btn btn-accent px-4 py-2">Contact Me</a>
+            </div>
+        </section>
+
+        <!-- about -->
+        <section id="about" class="section text-center">
+            <div class="container px-4">
+                <h2 class="mb-4">About Me</h2>
+                <p class="text-light mx-auto" style="max-width: 600px">I am learning web development with focus on clean UI and responsive design using Bootstrap.</p>
+            </div>
+
+            <div class="container mt-5">
+                <h3>This is photo of me before dancing.</h3>
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <img src="../image/img_before_pencak.jpg" class="img-fluid rounded" alt="img_before_pencak" />
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <img src="../image/img_before_batu_tumbok.jpg" class="img-fluid rounded" alt="img_before_batu_tumbok" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="section bg-opacity-10 bg-light">
+            <div class="container">
+                <h2 class="text-center mb-5">Skills</h2>
+                <div class="row g-4 text-center">
+                    <div class="col-md-4">
+                        <div class="card h-100 p-3 text-white">
+                            <div class="card-body">
+                                <i class="bi bi-code-slash text-info display-6 mb-3"></i>
+                                <h5>HTML</h5>
+                                <p class="small text-white-50">Structure & semantics</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 p-3 text-white">
+                            <div class="card-body">
+                                <i class="bi bi-brush text-info display-6 mb-3"></i>
+                                <h5>CSS</h5>
+                                <p class="small text-white-50">Layout & styling</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 p-3 text-white">
+                            <div class="card-body">
+                                <i class="bi bi-lightning text-info display-6 mb-3"></i>
+                                <h5>Bootstrap</h5>
+                                <p class="small text-white-50">Responsive design</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 p-3 text-white">
+                            <div class="card-body">
+                                <i class="bi bi-grid-3x3 text-info display-6 mb-3"></i>
+                                <h5>Rubik's Cube</h5>
+                                <p class="small text-white-50">Personal best 17s</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 p-3 text-white">
+                            <div class="card-body">
+                                <i class="bi bi-music-note text-info display-6 mb-3"></i>
+                                <h5>Malay Traditional Dance</h5>
+                                <p class="small text-white-50">Zapin, Joget, Inang</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 p-3 text-white">
+                            <div class="card-body">
+                                <i class="bi bi-lightning-charge text-info display-6 mb-3"></i>
+                                <h5>Taekwondo</h5>
+                                <p class="small text-white-50">Black belt 1st Dan</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 p-3 text-white">
+                            <div class="card-body">
+                                <i class="bi bi-eye text-info display-6 mb-3"></i>
+                                <h5>Divination</h5>
+                                <p class="small text-white-50">Divination Board, I Ching, Cards</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 p-3 text-white">
+                            <div class="card-body">
+                                <i class="bi bi-music-note-beamed text-info display-6 mb-3"></i>
+                                <h5>Guitar & Ukelili</h5>
+                                <p class="small text-white-50">Chinese pop</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 p-3 text-white">
+                            <div class="card-body">
+                                <i class="bi bi-stars text-info display-6 mb-3"></i>
+                                <h5>Fortune telling</h5>
+                                <p class="small text-white-50">Bazi & Astrology</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="education" class="section">
+            <div class="container position-relative">
+                <h2 class="text-center mb-5">Education</h2>
+                <div class="timeline-line"></div>
+
+                <div class="row align-items-center mb-5">
+                    <div class="col-md-5 text-md-end text-start order-2 order-md-1">
+                        <div class="card p-3 shadow-sm text-white">
+                            <h5 class="mb-1">Forward College</h5>
+                            <p class="text-info small mb-0">2026 - Present</p>
+                            <p class="small text-white-50 mb-0">Core software engineering: front-end & system architecture expertise.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-2 text-center order-1 order-md-2 mb-3 mb-md-0">
+                        <div class="timeline-dot"></div>
+                    </div>
+                    <div class="col-md-5 order-3"></div>
+                </div>
+
+                <div class="row align-items-center mb-5">
+                    <div class="col-md-5 order-md-1 order-3"></div>
+                    <div class="col-md-2 text-center order-1 order-md-2 mb-3 mb-md-0">
+                        <div class="timeline-dot"></div>
+                    </div>
+                    <div class="col-md-5 text-start order-2 order-md-3">
+                        <div class="card p-3 shadow-sm text-white">
+                            <h5 class="mb-1">SMK Tunku Abdul Rahman</h5>
+                            <p class="text-info small mb-0">2021 - 2025</p>
+                            <p class="small text-white-50 mb-0">SPM Math A: strong computational logic and problem-solving.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row align-items-center">
+                    <div class="col-md-5 text-md-end text-start order-2 order-md-1">
+                        <div class="card p-3 shadow-sm text-white">
+                            <h5 class="mb-1">SJK(C) Pumpong</h5>
+                            <p class="text-info small mb-1">2015 - 2020</p>
+                            <p class="small text-white-50 mb-0">Strong foundation in logic and mathematics.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-2 text-center order-1 order-md-2 mb-3 mb-md-0">
+                        <div class="timeline-dot"></div>
+                    </div>
+                    <div class="col-md-5 order-3"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section">
+            <div class="container">
+                <h2 class="text-center mb-5">Projects</h2>
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="card h-100 text-white p-2">
+                            <div class="card-body">
+                                <h5 class="card-title text-info">Game Website</h5>
+                                <p class="card-text text-white-50">Responsive layout using Bootstrap.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card h-100 text-white p-2">
+                            <div class="card-body">
+                                <h5 class="card-title text-info">Portfolio Website</h5>
+                                <p class="card-text text-white-50">Clean UI single-page design.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <div class="container">
+                <h2 class="text-center mb-5">Contact</h2>
+                <div class="row g-4">
+                    <div class="col-md-5">
+                        <div class="card p-4 h-100 text-white">
+                            <h4 class="mb-4">Contact Info</h4>
+                            <p class="mb-3"><i class="bi bi-envelope text-info me-2"></i> pingjin326364@gmail.com</p>
+                            <p class="mb-4"><i class="bi bi-geo-alt text-info me-2"></i> Pulau Pinang, Malaysia</p>
+                            <hr class="text-secondary" />
+                            <p class="small text-white-50 mb-1">Focus Areas:</p>
+                            <span class="badge bg-dark border border-secondary mb-1">Web Development</span>
+                            <span class="badge bg-dark border border-secondary mb-1">UI Design</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 col-md-12">
+                        <form class="card p-4">
+                            <div class="mb-3">
+                                <label class="form-label text-white">Name</label>
+                                <input type="text" class="form-control bg-dark text-white border-secondary" />
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label text-white">Email</label>
+                                <input type="email" class="form-control bg-dark text-white border-secondary" />
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label text-white">Message</label>
+                                <textarea class="form-control bg-dark text-white border-secondary" rows="4"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-accent w-100">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="text-center py-4 border-top border-secondary mt-5">
+            <a href="https://github.com/pingjin-code"><i class="bi bi-github text-info me-2"></i></a>
+            <a href="https://www.instagram.com/pj.mu2/?__pwa=1"><i class="bi bi-instagram text-info me-2"></i></a>
+            <p class="small text-white-50 mb-0">© 2026 Elias. All rights reserved.</p>
+        </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>
