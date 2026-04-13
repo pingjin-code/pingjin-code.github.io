@@ -1,0 +1,50 @@
+body {
+    background: #0f172a;
+    color: white;
+}
+.section {
+    padding: 80px 0;
+}
+.card {
+    background: #1e293b;
+    border: 1px solid #334155;
+    transition: 0.3s;
+}
+.card:hover {
+    transform: translateY(-5px);
+    border-color: #38bdf8;
+}
+.text-secondary {
+    color: #94a3b8;
+}
+label {
+    color: #e2e8f0;
+}
+.timeline-line {
+    position: absolute;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    background: #38bdf8;
+    transform: translateX(-50%);
+    z-index: 0;
+}
+.timeline-dot {
+    width: 16px;
+    height: 16px;
+    background: #38bdf8;
+    border-radius: 50%;
+    margin: auto;
+    position: relative;
+    z-index: 1;
+}
+.btn-accent {
+    background: #38bdf8;
+    border: none;
+    color: #000;
+    font-weight: bold;
+}
+.btn-accent:hover {
+    background: #7dd3fc;
+    transform: scale(1.05);
+}
