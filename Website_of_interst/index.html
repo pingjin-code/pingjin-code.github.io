@@ -6,6 +6,8 @@
         <title>Game World</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
         <style>
             /* PJ */
             body {
@@ -16,7 +18,8 @@
             .navbar {
                 background-color: #020617;
             }
-            .home-mt { /* for custom home page */
+            .home-mt {
+                /* for custom home page */
                 margin-top: 60px;
             }
             .section {
@@ -27,6 +30,11 @@
                 border: none;
                 border-radius: 15px;
             }
+            .card-img-top {
+                width: 100%;
+                aspect-ratio: 16 / 9; /* 比例 */
+                object-fit: cover; /* 避免图片拉伸 */
+            }
             .card:hover {
                 transform: translateY(-5px);
                 transition: 0.3s;
@@ -35,8 +43,26 @@
                 margin-bottom: 30px;
             }
             .btn-custom {
-                background-color: #38bdf8; 
+                background-color: #38bdf8;
                 border: none;
+            }
+            /* custom for mobs img */
+            .frs {
+                width: 80px;
+                height: 80px;
+                object-fit: contain;
+                float: right;
+            }
+            .home-section {
+                height: 100vh;
+                background:
+                    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                    url("../image/minecraft_background.jpg") no-repeat center center/cover;
+            }
+            @media (max-width: 768px) {
+                .home-section {
+                    height: 60vh;
+                }
             }
         </style>
     </head>
@@ -54,30 +80,30 @@
                         <li class="nav-item"><a class="nav-link" href="#modes">Game Modes</a></li>
                         <li class="nav-item"><a class="nav-link" href="#bestiary">Bestiary</a></li>
                         <li class="nav-item"><a class="nav-link" href="#workshop">Workshop</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#join">Join</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
 
         <!-- Home-PJ -->
-        <section id="home" class="section text-center home-mt">
-            <!-- home-mt for home margin top -->
-            <div class="container">
-                <h1>Welcome to the Minecraft Game World</h1>
-                <p>Explore, survive, and create your own adventure.</p>
-                <a href="#join" class="btn btn-custom">Join Now</a>
+        <section id="home" class="home-section d-flex align-items-center home-mt">
+            <div class="container text-center text-white">
+                <h1 class="display-3 fw-bold">Welcome to Minecraft</h1>
+                <p class="lead">Explore, survive, and create your own adventure.</p>
+                <a href="#contact" class="btn btn-custom btn-lg">Join Now</a>
             </div>
         </section>
 
         <!-- Game Modes-PJ -->
         <section id="modes" class="section">
             <div class="container">
-                <h2>Game Modes</h2>
+                <h2 class="mb-4 text-center">Game Modes</h2>
                 <div class="row g-3">
                     <div class="col-md-6">
                         <div class="card text-center text-white h-100">
                             <div class="card-body">
+                                <i class="fa-solid fa-cube display-3 frs"></i>
                                 <h5>Creative</h5>
                                 <p>Unlimited resources. Build freely.</p>
                             </div>
@@ -87,24 +113,27 @@
                     <div class="col-md-6">
                         <div class="card text-center text-white h-100">
                             <div class="card-body">
+                                <i class="fa-solid fa-heart display-3 frs"></i>
                                 <h5>Survival</h5>
                                 <p>Gather resources and stay alive.</p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="col-md-6 mt-5">
+                    <div class="col-md-6">
                         <div class="card text-center text-white h-100">
                             <div class="card-body">
+                                <i class="fa-solid fa-map-location-dot display-3 frs"></i>
                                 <h5>Adventure</h5>
                                 <p>Complete missions and maps.</p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="col-md-6 mt-5">
+                    <div class="col-md-6">
                         <div class="card text-center text-white h-100">
                             <div class="card-body">
+                                <i class="fa-solid fa-eye display-3 frs"></i>
                                 <h5>Spectator</h5>
                                 <p>Observe the world freely.</p>
                             </div>
@@ -116,14 +145,15 @@
 
         <!-- Bestiary-PJ -->
         <section id="bestiary" class="section">
-            <div class="container">
-                <h2>Bestiary</h2>
+            <div class="container text-center">
+                <h2 class="mb-4">Bestiary</h2>
 
                 <h4 class="text-info">Friendly</h4>
                 <div class="row g-5 mb-4">
                     <div class="col-md-6">
                         <div class="card text-white">
                             <div class="card-body">
+                                <img class="frs" src="../image/cow.png" alt="Cow img" />
                                 <h5>Cow</h5>
                                 <p>Provides food.</p>
                             </div>
@@ -132,6 +162,7 @@
                     <div class="col-md-6">
                         <div class="card text-white">
                             <div class="card-body">
+                                <img class="frs" src="../image/white_sheep.png" alt="White Sheep img" />
                                 <h5>Sheep</h5>
                                 <p>Gives wool.</p>
                             </div>
@@ -144,6 +175,7 @@
                     <div class="col-md-6">
                         <div class="card text-white">
                             <div class="card-body">
+                                <img class="frs" src="../image/enderman.png" alt="Enderman img" />
                                 <h5>Enderman</h5>
                                 <p>Attacks when provoked.</p>
                             </div>
@@ -152,6 +184,7 @@
                     <div class="col-md-6">
                         <div class="card text-white">
                             <div class="card-body">
+                                <img class="frs" src="../image/wolf.png" alt="Wolf img" />
                                 <h5>Wolf</h5>
                                 <p>Can be tamed.</p>
                             </div>
@@ -164,6 +197,7 @@
                     <div class="col-md-6">
                         <div class="card text-white">
                             <div class="card-body">
+                                <img class="frs" src="../image/zombie.png" alt="Zombie img" />
                                 <h5>Zombie</h5>
                                 <p>Attacks players.</p>
                             </div>
@@ -172,6 +206,7 @@
                     <div class="col-md-6">
                         <div class="card text-white">
                             <div class="card-body">
+                                <img class="frs" src="../image/creeper.png" alt="Creeper img" />
                                 <h5>Creeper</h5>
                                 <p>Explodes near players.</p>
                             </div>
@@ -182,50 +217,77 @@
         </section>
 
         <!-- Workshop-AL -->
-        <section id="workshop" class="section">
-            <div class="container">
-                <h2>Workshop</h2>
-                <div class="row g-4">
-                    <div class="col-md-6">
-                        <div class="card text-white">
-                            <img src="../image/Modern_City_Build.jpg" class="card-img-top" />
-                            <div class="card-body"><p>Modern City Build</p></div>
+        <section id="workshop" class="section container">
+            <h2 class="mb-4 text-center">Workshop</h2>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card h-100 bg-dark text-white">
+                        <img src="../image/Modern_City_Build.jpg" class="card-img-top" alt="Modern City" />
+                        <div class="card-body text-center">
+                            <h5>Modern City Build</h5>
                         </div>
                     </div>
+                </div>
 
-                    <div class="col-md-6">
-                        <div class="card text-white">
-                            <img src="../image/Fantasy_Castle.jpg" class="card-img-top" />
-                            <div class="card-body"><p>Fantasy Castle</p></div>
+                <div class="col-md-6">
+                    <div class="card h-100 bg-dark text-white">
+                        <img src="../image/Fantasy_Castle.jpg" class="card-img-top" alt="Fantasy Castle" />
+                        <div class="card-body text-center">
+                            <h5>Fantasy Castle</h5>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Join-AL -->
-        <section id="join" class="section">
+        <!-- Contact-AL -->
+        <section id="contact" class="section">
             <div class="container">
-                <h2>Join the Adventure</h2>
-                <p>Server Address: <strong>mc.114514.com</strong></p>
+                <h2 class="text-center mb-5">Contact</h2>
+                <div class="row g-4">
+                    <div class="col-md-5">
+                        <div class="card p-3 h-100 text-white">
+                            <h4 class="mb-4">Contact Info</h4>
+                            <p>Server Address: <strong>mc.114514.com</strong></p>
+                            <p>Server owner:</p>
 
-                <form>
-                    <div class="mb-3">
-                        <label>Name</label>
-                        <input class="form-control" placeholder="Your Name"/>
+                            <p class="mb-3"><i class="bi bi-envelope text-info me-2"></i> pingjin326364@gmail.com</p>
+                            <p class="mb-3"><i class="bi bi-envelope text-info me-2"></i> alvinchan1233@gmail.com</p>
+
+                            <hr class="text-secondary" />
+
+                            <p class="small text-white-50 mb-1">Server administrator:</p>
+                            <span class="badge bg-dark border border-secondary mb-1">Elias</span>
+                            <span class="badge bg-dark border border-secondary mb-1">ALvin</span>
+                            <span class="badge bg-dark border border-secondary mb-1">Sky</span>
+                            <span class="badge bg-dark border border-secondary mb-1">Nicholas</span>
+                        </div>
                     </div>
-                    <div class="mb-3">
-                        <label>Contact</label>
-                        <input class="form-control" placeholder="Your Contact"/>
+
+                    <div class="col-lg-7 col-md-12">
+                        <form class="card p-4">
+                            <div class="mb-3">
+                                <label class="form-label text-white">Name</label>
+                                <input type="text" class="form-control bg-dark text-white border-secondary" />
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label text-white">Email</label>
+                                <input type="email" class="form-control bg-dark text-white border-secondary" />
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label text-white">Message</label>
+                                <textarea class="form-control bg-dark text-white border-secondary" rows="4"></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-accent w-100">Send Message</button>
+                        </form>
                     </div>
-                    <div class="mb-3">
-                        <label>Message</label>
-                        <textarea class="form-control" placeholder="Your Message"></textarea>
-                    </div>
-                    <button class="btn btn-custom">Submit</button>
-                </form>
+                </div>
             </div>
         </section>
+
         <!-- Footer-AL -->
         <footer class="text-center py-4 border-top border-secondary mt-5">
             <p class="small text-white-50 mb-0">© 2026 Elias. Alvin. All rights reserved.</p>
